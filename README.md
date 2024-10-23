@@ -19,11 +19,14 @@ To download the model, set cached to False in `get_opt` and `get_llama` and run 
 
 ## Running:
 
-python opt.py facebook/opt-125m c4 ALPS {sparsity} --model_path {your_path} --data_path {your_path}
++ Create two folders `results` and `pruned_models`
 
-python llama.py meta-llama/Llama-2-7b-hf c4 ALPS {sparsity} --model_path {your_path} --data_path {your_path}
++ Run Python files:
+    - python opt.py facebook/opt-125m c4 ALPS {sparsity} --model_path {your_path} --data_path {your_path}
 
-We usually use c4 as the training (calibration) data. For additional configuration options, refer to `opt.py` and `llama.py`. The results of perplexity and zero-shot evaluations will be stored in the `results` directory, while the pruned models will be saved in the `pruned_models` directory.
+     - python llama.py meta-llama/Llama-2-7b-hf c4 ALPS {sparsity} --model_path {your_path} --data_path {your_path}
+
++ We usually use c4 as the training (calibration) data. For additional configuration options, refer to `opt.py` and `llama.py`. The results of perplexity and zero-shot evaluations will be stored in the `results` directory, while the pruned models will be saved in the `pruned_models` directory.
 
 
 ## Citing ALPS:
